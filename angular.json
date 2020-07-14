@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "M5AngularExam": {
+    "angular6": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/M5AngularExam",
+            "outputPath": "dist/angular6",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/font-awesome-animation/dist/font-awesome-animation.css",
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/animate.css/animate.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +73,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "M5AngularExam:build"
+            "browserTarget": "angular6:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "M5AngularExam:build:production"
+              "browserTarget": "angular6:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "M5AngularExam:build"
+            "browserTarget": "angular6:build"
           }
         },
         "test": {
@@ -114,15 +121,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "M5AngularExam:serve"
+            "devServerTarget": "angular6:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "M5AngularExam:serve:production"
+              "devServerTarget": "angular6:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "M5AngularExam"
+    }
+  },
+  "defaultProject": "angular6",
+  "cli": {
+    "analytics": "cbe9c621-aa77-45b1-8ec8-f51b01c54cbc"
+  }
 }

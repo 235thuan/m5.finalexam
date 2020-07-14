@@ -1,5 +1,5 @@
 {
-  "name": "m5-angular-exam",
+  "name": "angular6",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,6 +19,13 @@
     "@angular/platform-browser": "~10.0.2",
     "@angular/platform-browser-dynamic": "~10.0.2",
     "@angular/router": "~10.0.2",
+    "animate.css": "^4.1.0",
+    "bootstrap": "^4.5.0",
+    "date-fns": "^2.14.0",
+    "font-awesome": "^4.7.0",
+    "font-awesome-animation": "^0.2.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

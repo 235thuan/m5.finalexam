@@ -1,0 +1,24 @@
+<div>
+  <label class="offset-md-3" style="color:black">
+    <th>Chi tiết sách</th>
+  </label>
+  <button [routerLink]="['/books']" class="btn btn-light offset-md-2"> Xem Danh sách</button>
+</div>
+<table class="col-4 col-md-4 offset-md-3 mt-1" border="1px" style="border: gray">
+  <tr>
+    Tên sách : {{book.title}}
+  </tr>
+  <tr>
+    Tác giả : {{book.author}}
+  </tr>
+  <tr>
+    <label>Miêu tả :</label>
+    <div>
+      {{book.description}}
+    </div>
+
+  </tr>
+
+
+</table>
+
