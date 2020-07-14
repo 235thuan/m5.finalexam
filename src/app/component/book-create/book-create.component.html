@@ -1,8 +1,8 @@
 <div class="alert alert-success" role="alert" *ngIf="isShowSuccess" xmlns="http://www.w3.org/1999/html">
   {{ message }}
 </div>
-<button [routerLink]="['/books']" class="btn btn-light offset-md-12"> Xem danh sách </button>
-<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+<button [routerLink]="['/books']" class="btn btn-primary offset-md-10"> Xem danh sách </button>
+<form [formGroup]="Field" (ngSubmit)="onSubmit()">
   <input type="hidden" formControlName="id" />
   <div class="form-group">
     <label for="title">Tên sách :</label>

@@ -34,15 +34,15 @@ export class BookCreateComponent implements OnInit {
       title: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z]*'), Validators.minLength(6)]),
       author: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z]*'), Validators.minLength(6)]),
       description: new FormControl('', [Validators.required, Validators.minLength(6)])
-    })
+    });
   }
 
   onSubmit() {
     if (this.bookId) {
-      this.bookService.updateBook(this.bookForm.value).subscribe(result => {
-        this.isShowSuccess = true;
-        this.message = 'Đã cập nhật thông tin !';
-      });
+        this.bookService.updateBook(this.bookForm.value).subscribe(result => {
+          this.isShowSuccess = true;
+          this.message = 'Đã cập nhật thông tin !';
+        });
     } else {
       this.bookService.createBook(this.bookForm.value).subscribe(result => {
         this.isShowSuccess = true;
