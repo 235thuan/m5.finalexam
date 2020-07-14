@@ -13,7 +13,7 @@ export class LibaryManagementComponent implements OnInit {
   ngOnInit(): void {
     this.bookService
       .getBooks()
-      .subscribe(next => (this.bookList = next), error => (this.bookList = []));
+      .subscribe(next => (this.bookList = next), error => (this.bookList = []))
   }
   deleteBook(i) {
     if(confirm()){

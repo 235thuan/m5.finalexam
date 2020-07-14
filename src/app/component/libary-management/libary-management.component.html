@@ -1,9 +1,9 @@
 <div>
   <label class="offset-md-3" style="color:black"><th>Có {{bookList.length}} cuốn sách</th> </label>
-<button [routerLink]="['/books', 'add']" class="btn btn-light offset-md-2"> Thêm sách mới </button>
+<button [routerLink]="['/books', 'add']" class="btn btn-light offset-md-3"> Thêm sách mới </button>
 </div>
-<table class="col-4 col-md-4 offset-md-3 mt-1" border="1px" style="border: gray" >
-    <tr>
+<table class="col-5 col-md-5 offset-md-3 mt-1" border="1px" style="border: gray;" >
+    <tr style="text-align: center">
       <th>#</th>
       <th>Tên sách</th>
       <th>Tác giả</th>
@@ -11,11 +11,11 @@
     </tr>
   <tr *ngFor="let book of bookList; index as i">
 
-    <td>{{book.id}}</td>
+    <td>{{i+1}}</td>
     <td><a [routerLink]="['/books', book.id]">{{book.title}}</a></td>
     <td>{{book.author}}</td>
-    <td>
-      <a (click)="deleteBook(i)">Xóa</a> |  <a [routerLink]="['/books', book.id, 'edit']">Sửa</a>
+    <td style="text-align: center">
+      <a (click)="deleteBook(i)" class="btn btn-light" >Xóa</a> |  <a class="btn btn-light" [routerLink]="['/books', book.id, 'edit']">Sửa</a>
     </td>
   </tr>
 </table>
